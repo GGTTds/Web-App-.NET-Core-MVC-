@@ -13,4 +13,10 @@
     <None Include="bundleconfig.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Contact\" />
+    <Folder Include="Views\Tovar\" />
+    <Folder Include="Views\Company\" />
+  </ItemGroup>
+
 </Project>
