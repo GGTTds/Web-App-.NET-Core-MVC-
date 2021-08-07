@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Web_App_ASP.NET_Core_MVC_.Dron> 
+@{
+    @ViewBag.Title
+}
+<section id="work" class="parallax-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <!-- SECTION TITLE -->
+                <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
+                    <h2>Имеющиеся дроны</h2>
+                    <p>Выберите подходящяй дрон для себя</p>
+                </div>
+            </div>
+
+            @foreach (var s in Model)
+            {
+                <div class="wow fadeInUp col-md-4 col-sm-6" data-wow-delay="0.4s">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <a href="~/Info" class="image-popup">
+                            <div class="work-thumb-overlay">
+                                <h4 class="white-color">@s.Name</h4>
+                                <h2>@s.Price рублей</h2>
+                            </div>
+                            <img src="~/@s.Igm" class="img-responsive" alt="Work 1">
+                        </a>
+                    </div>
+                </div>
+            }
+
+            </div>
+        </div>
+    </section>
