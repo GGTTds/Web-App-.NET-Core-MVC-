@@ -5,4 +5,12 @@
     <RootNamespace>Web_App_ASP.NET_Core_MVC_</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+  </ItemGroup>
+
 </Project>
