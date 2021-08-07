@@ -34,7 +34,12 @@ namespace Web_App_ASP.NET_Core_MVC_.Controllers
         {
             db.Zvonks.Add(zv);
             await db.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("EndCont");
+        }
+
+        public IActionResult EndCont()
+        {
+            return View();
         }
 
     }
