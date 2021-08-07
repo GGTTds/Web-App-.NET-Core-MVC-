@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Web_App_ASP.NET_Core_MVC_.Zvonk
+@{
     @ViewBag.Title;
 }
 
@@ -17,15 +18,15 @@
             <div class="col-md-7 col-sm-10">
                 <!-- CONTACT FORM HERE -->
                 <div class="wow fadeInUp" data-wow-delay="0.4s">
-                    <form id="contact-form" action="#" method="get">
+                    <form id="contact-form" asp-action="create" asp-controller="Contact" method="post">
                         <div class="col-md-6 col-sm-6">
-                            <input type="text" class="form-control" name="name" placeholder="ФИО" required="">
+                            <input type="text" asp-for="Name" class="form-control"  placeholder="ФИО" required="">
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <input type="email" class="form-control" name="email" placeholder="Телефон" required="">
+                            <input type="text" class="form-control" asp-for="Tel" placeholder="Телефон" required="">
                         </div>
                         <div class="col-md-offset-8 col-md-4 col-sm-offset-6 col-sm-6">
-                            <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
+                            <button id="submit" type="submit" class="form-control" name="submit">Заказать звонок</button>
                         </div>
                     </form>
                 </div>

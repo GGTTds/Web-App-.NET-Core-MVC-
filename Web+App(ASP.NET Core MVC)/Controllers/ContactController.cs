@@ -4,12 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Web_App_ASP.NET_Core_MVC_.Models;
 
 namespace Web_App_ASP.NET_Core_MVC_.Controllers
 {
     public class ContactController : Controller
     {
-        // GET: ContactController
+        private TaxiInDronContext db;
+        public ContactController(TaxiInDronContext context)
+        {
+            db = context;
+        }
         public ActionResult Index()
         {
             return View();
@@ -21,67 +27,15 @@ namespace Web_App_ASP.NET_Core_MVC_.Controllers
             return View();
         }
 
-        // GET: ContactController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
 
         // POST: ContactController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<IActionResult> Create(Zvonk zv)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            db.Zvonks.Add(zv);
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
 
-        // GET: ContactController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: ContactController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: ContactController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: ContactController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
