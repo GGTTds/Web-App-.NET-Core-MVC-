@@ -11,7 +11,7 @@ namespace Web_App_ASP.NET_Core_MVC_.Controllers
     public class ZakazTovController : Controller
     {
         private TaxiInDronContext db;
-        public int? ThisId;
+        public static int? ThisId = 0;
 
         public ZakazTovController(TaxiInDronContext context)
         {
