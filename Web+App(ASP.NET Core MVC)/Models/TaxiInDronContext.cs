@@ -71,6 +71,7 @@ namespace Web_App_ASP.NET_Core_MVC_
                     .HasColumnName("DateVP");
 
                 entity.Property(e => e.ImgDron).HasMaxLength(200);
+                entity.Property(e => e.full_name).HasMaxLength(200);
 
                 entity.HasOne(d => d.ColorNavigation)
                     .WithMany(p => p.HarkDrons)

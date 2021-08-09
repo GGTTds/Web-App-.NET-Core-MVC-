@@ -13,6 +13,9 @@ namespace Web_App_ASP.NET_Core_MVC_
         public DateTime? DateVp { get; set; }
         public int? WhoIsAvto { get; set; }
         public string ImgDron { get; set; }
+        public int? Ves { get; set; }
+        public bool? IsCamr { get; set; }
+        public string full_name { get; set; }
 
         public virtual ColorDron ColorNavigation { get; set; }
         public virtual Dron WhoIsAvtoNavigation { get; set; }
