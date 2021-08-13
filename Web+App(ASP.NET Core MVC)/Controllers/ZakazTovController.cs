@@ -42,7 +42,7 @@ namespace Web_App_ASP.NET_Core_MVC_.Controllers
         }
         public IActionResult EndZak()
         {
-            return View();
+            return Ok("Покупка завершена");
         }
 
 

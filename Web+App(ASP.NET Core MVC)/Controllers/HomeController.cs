@@ -20,6 +20,7 @@ namespace Web_App_ASP.NET_Core_MVC_.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Главная страница";
             return View();
         }
 

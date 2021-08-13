@@ -1,10 +1,4 @@
-/*
 
-Template 2087 Kalay
-
-http://www.tooplate.com/view/2087-kalay
-
-*/
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400');
 
@@ -310,7 +304,7 @@ a:hover, a:active, a:focus {
   padding: 0;
   overflow: hidden;
   position: relative;
-  text-align: left;
+  text-align: center;
 }
 
 .work-thumb img {
