@@ -46,9 +46,8 @@ namespace Web_App_ASP.NET_Core_MVC_
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseCookiePolicy();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

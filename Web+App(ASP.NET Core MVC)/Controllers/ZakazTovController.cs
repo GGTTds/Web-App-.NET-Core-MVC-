@@ -25,7 +25,8 @@ namespace Web_App_ASP.NET_Core_MVC_.Controllers
             {
                 ThisId = id;
                 ViewBag.Title = "Заказ дрона";
-                return View(await db.HarkDrons.Where(p => p.WhoIsAvto == id).ToListAsync());
+                var ObjDat = db.Drons.Include(p => p.HarkDrons).Where(p=> p.Id == id);
+                return View(await ObjDat.ToListAsync());
             }
         }
        
